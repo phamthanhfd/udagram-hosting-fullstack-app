@@ -12,6 +12,20 @@ jobs:
           node-version: "16.15"
       - checkout
       - run:
+        name: Install pip
+        command: |
+          sudo apt update
+          sudo apt install -y python-pip python-dev
+      - run:
+          name: Install AWS dependencies
+          command: |
+            sudo pip install awsebcli
+      - run:
+          name: "Setup environment variables"
+          command: |
+            echo "Setup environment variables"
+            npm run setup-env
+      - run:
           name: Install Front-End Dependencies
           command: |
             echo "Install dependencies in the the Front-end ... "
@@ -20,11 +34,6 @@ jobs:
             echo "NPM --version" 
             echo $(npm --version)
             npm run frontend:install
-      - run:
-          name: "Setup environment variables"
-          command: |
-            echo "Setup environment variables"
-            npm run setup-env
       - run:
           name: Install API Dependencies
           command: |
