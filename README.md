@@ -32,10 +32,9 @@ The project application, Udagram - an Image Filtering application, allows users 
 - POSTGRES_PASSWORD = <Database_Password>
 - POSTGRES_DB = <Database_Name>
 - POSTGRES_HOST = <Database_Host>
-- AWS_REGION = <us-east-1>
-- AWS_PROFILE = <Profile>
+- AWS_REGION = us-east-1
+- AWS_PROFILE = <AWS_Profile>
 - AWS_BUCKET = <Bucket_Name>
-- URL = <Url>
 - JWT_SECRET = <Jwt_Secret>
 
 ```
