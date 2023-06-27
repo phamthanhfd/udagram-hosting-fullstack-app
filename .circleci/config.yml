@@ -60,11 +60,11 @@ workflows:
         filters:
           branches:
             only:
-              - sherwin/cicd
+              - master
       - deploy:
           filters:
             branches:
               only:
-                - sherwin/cicd
+                - master
           requires:
             - build
