@@ -12,14 +12,12 @@ jobs:
           node-version: "16.15"
       - checkout
       - run:
-          name: Install pip
+          name: Install EB
           command: |
-            sudo apt update
-            sudo apt install -y python-pip python-dev
-      - run:
-          name: Install AWS dependencies
-          command: |
-            sudo pip install awsebcli
+            sudo apt-get -y -qq update
+            sudo apt-get install python3-pip python-dev build-essential
+            sudo pip install --upgrade setuptools
+            sudo pip install awsebcli --upgrade
       - run:
           name: "Setup environment variables"
           command: |
