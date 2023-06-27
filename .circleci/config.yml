@@ -22,8 +22,6 @@ jobs:
           name: "Setup environment variables"
           command: |
             echo "Setup environment variables"
-            eb init sherwin-udagram-api --region us-east-1
-            eb use sherwin-udagram-api
             npm run setup-env
       - run:
           name: Install Front-End Dependencies
