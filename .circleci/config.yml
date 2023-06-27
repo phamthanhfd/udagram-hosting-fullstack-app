@@ -34,7 +34,7 @@ jobs:
              echo $(node --version)
              echo "NPM --version" 
              echo $(npm --version)
-            npm run api:instal
+            npm run api:install
       # TODO: Test the frontend
       - run:
           name: Front-End Testing
