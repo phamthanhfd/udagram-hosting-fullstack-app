@@ -12,10 +12,10 @@ jobs:
           node-version: "16.15"
       - checkout
       - run:
-        name: Install pip
-        command: |
-          sudo apt update
-          sudo apt install -y python-pip python-dev
+          name: Install pip
+          command: |
+            sudo apt update
+            sudo apt install -y python-pip python-dev
       - run:
           name: Install AWS dependencies
           command: |
