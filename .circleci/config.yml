@@ -67,14 +67,8 @@ workflows:
   udagram:
     jobs:
       - build
-      - hold:
+      - deploy:
           filters:
             branches:
               only:
-                - main
-          type: approval
-          requires:
-            - build
-      - deploy:
-          requires:
-            - hold
+                - sherwin/cicd
