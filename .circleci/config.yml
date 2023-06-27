@@ -56,7 +56,11 @@ jobs:
 workflows:
   udagram:
     jobs:
-      - build
+      - build:
+        filters:
+          branches:
+            only:
+              - sherwin/cicd
       - deploy:
           filters:
             branches:

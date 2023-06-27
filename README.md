@@ -15,7 +15,7 @@ The project application, Udagram - an Image Filtering application, allows users 
 - A RDS database running Postgres.
 - A S3 bucket for FrontEnd.
 - A Elastic Beanstalk for Backend
-
+```
 
 ### Setup project
 
@@ -50,8 +50,8 @@ The project application, Udagram - an Image Filtering application, allows users 
 ### AWS Setup
 ```
 
-- S3: sherwinfd-thanhpv29.s3-website-us-east-1.amazonaws.com
-- Elastic Beanstalk: sherwin-udagram-api.eba-6fdazw3d.us-east-1.elasticbeanstalk.com
+- S3: http://sherwinfd-thanhpv29.s3-website-us-east-1.amazonaws.com
+- Elastic Beanstalk: http://sherwin-udagram-api.eba-6fdazw3d.us-east-1.elasticbeanstalk.com/
 - DB host RDS: database-1.clsp2eet6nij.us-east-1.rds.amazonaws.com
 - DB port: 5432
 - DB name: postgres
@@ -59,7 +59,7 @@ The project application, Udagram - an Image Filtering application, allows users 
 ```
 
 ### CircleCI Pipelines
-
+```
 1. Build
     - Setup environment variables
     - Install NodeJS
