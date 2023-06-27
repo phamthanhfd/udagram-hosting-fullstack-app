@@ -21,6 +21,11 @@ jobs:
             echo $(npm --version)
             npm run frontend:install
       - run:
+          name: "Setup environment variables"
+          command: |
+            echo "Setup environment variables"
+            npm run setup-env
+      - run:
           name: Install API Dependencies
           command: |
             echo "Install dependencies in the the backend API ... "
