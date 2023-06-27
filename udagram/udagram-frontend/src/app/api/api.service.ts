@@ -40,7 +40,7 @@ export class ApiService {
   }
 
   get(endpoint): Promise<any> {
-    const url = `${API_HOST}${endpoint}`;
+    const url = `${API_HOST}${endpoint}`;    
     const req = this.http
       .get(url, this.httpOptions)
       .pipe(map(ApiService.extractData));
@@ -53,7 +53,9 @@ export class ApiService {
 
   post(endpoint, data): Promise<any> {
     const url = `${API_HOST}${endpoint}`;
+    this.httpOptions.headers.set('access-control-allow-origin','*')
     console.log(url);
+    console.log(this.httpOptions.headers);
     return this.http
       .post<HttpEvent<any>>(url, data, this.httpOptions)
       .toPromise()
