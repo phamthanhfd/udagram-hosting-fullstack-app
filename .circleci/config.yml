@@ -72,3 +72,5 @@ workflows:
             branches:
               only:
                 - sherwin/cicd
+          requires:
+            - build
